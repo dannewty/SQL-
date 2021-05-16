@@ -1,0 +1,34 @@
+-- CREATE, allows us to create databases, tables, stored procedures etc
+CREATE DATABASE GameStore 
+
+CREATE TABLE Employee (
+Emp_Id INT PRIMARY KEY )
+
+-- DROP, allows us to drop databases, tables, stored procedures etc
+DROP GameStore 
+
+-- UPDATE, allows us to update specific records in a table 
+UPDATE Employee
+SET Age =  55
+WHERE Emp_Id = 1 
+
+-- DELETE, allows us to DELETE specific records in a table 
+DELETE FROM Employee
+WHERE Emp_Id = 1 
+
+-- ALTER, allows us to add new rows into a table
+ALTER Employee
+ADD First_Name VARCHAR (40) NOT NULL 
+
+-- INSERT INTO, allows us to insert new data into tables 
+INSERT INTO Employee (First_Name)
+VALUES (Dave)
+VALUES (Simon)
+
+-- FOREIGN KEY is used to reference a primary key in another table 
+FOREIGN KEY (Game_Id) REFERENCES Games (Game_Id)
+
+-- DATETIME 2 
+
+
+
