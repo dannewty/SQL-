@@ -28,7 +28,7 @@ VALUES (Simon)
 -- FOREIGN KEY is used to reference a primary key in another table 
 FOREIGN KEY (Game_Id) REFERENCES Games (Game_Id)
 
--- DATETIME 2 
+
 
 
 
