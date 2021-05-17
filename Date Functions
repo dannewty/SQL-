@@ -1,0 +1,10 @@
+-- GETDATE, this allows us to get the current date and time 
+SELECT GETDATE()
+
+-- Inserting data using DATETIME 
+INSERT INTO Online Orders (OrderDate)
+VALUES ('20210521 22:09:25')
+
+-- How to convert DATETIME into British format
+SELECT CONVERT (VARCHAR,OrderDate,103) FROM OnlineOrders
+
