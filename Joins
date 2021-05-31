@@ -1,0 +1,8 @@
+-- In this file i will use the GameStore database as an example
+
+Here i want to find out who is the Manager of the Hanley Branch by combining the HanleyEmployees table with the Branch table 
+SELECT HanleyEmployees.EmployeeID, HanleyEmployees.FirstName + HanleyEmployees.LastName AS ManagerName 
+FROM HanleyEmployees
+JOIN Branch
+ON HanleyEmployees.EmployeeID = Branch.ManagerID
+
