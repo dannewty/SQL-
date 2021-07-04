@@ -1,0 +1,27 @@
+in this procedure i want to return all the employees from a specific branch
+
+CREATE PROCEDURE dbo.sp_GetAllEmpHan
+AS 
+BEGIN
+SELECT EmployeeID, FirstName, LastName 
+FROM HanleyEmp
+END
+
+Now i will execute this procedure by using the below 
+EXEC sp_GetAllEmpHan
+-------------------------------------------------------------------------------------------------------
+
+in this next procedure i want to limit the results by lastname, I will do this by passing in a variable 
+
+CREATE PROCEDURE dbo.spGetAllEmpHanByLastName
+	@LastName VARCHAR (40)
+AS 
+BEGIN
+	SELECT EmployeeID, Firstname, Lastname 
+	FROM HanleyEmp
+	WHERE Lastname = @LastName;
+END 
+
+when i execute this procedure, i will be expected to pass in a parameter 
+EXEC spGetAllEmpHanByLastName 'Nutt'
+
